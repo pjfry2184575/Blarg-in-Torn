@@ -1,0 +1,35 @@
+..greet 
+
+{set;~firstMessage;
+{buildembed;
+color:light blue;
+title:Welcome to {guildname},;
+description:
+{username}, 
+
+You are Islander #{guildsize}
+&
+Joined us here at : {userjoinedat;YYYY/MM/DD HH:mm:ss}
+---------------------------------------------------------
+
+The Islanders have a few Service roles you can collect here on the island.
+
+If you provide a Service not list here, reach out to a Commander and have your role made and given to you
+---------------------------------------------------------
+
+__**?Service <*role*>**__
+• *Reviver*
+• *Spy*
+• *Anon Message*
+• *Gamer*
+
+---------------------------------------------------------
+
+[If you get an error message regarding your verification from Yata. Click on this blue text, login with Discord and give Torn access, then try verifying again here in the server with !verify in the #verify channel..... ](https://discord.com/oauth2/authorize?client_id=441210177971159041&redirect_uri=https%3A%2F%2Fwww.torn.com%2Fdiscord.php&response_type=code&scope=identify)
+;
+
+image.url:https://gyazo.com/dbbad847a93e701dcaae19b0dcaf9e65.png
+}}
+        
+{set;~firstMessageID;{send;808557874762350613;{get;~firstMessage}}}
+{timer;{delete;808557874762350613;{get;~firstMessageID}};1800s}
