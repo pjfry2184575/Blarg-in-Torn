@@ -1,0 +1,38 @@
+..cc set verify
+{if;{argslength};==;0;
+{embed;{buildembed;
+  color:FF0000;
+  description:
+You need to enter your ID #.
+{return}
+}}
+}
+
+{if;{indexof;{get;_{userid}Account};{args}};!=;-1;
+{embed;{buildembed;
+  color:FF0000;
+  description:
+You have already entered your ID #.
+{return}
+}}
+}
+
+{if;{get;_{userid}Account};==;;
+  {set;_{userid}Account}}
+
+{set;_{userid}Account;{get;_{userid}Account};{args};{username};{userdiscrim};{userid};{usermention}
+}
+
+{embed;{buildembed;
+  color:009900;
+  description:
+Thank you {usermention}, you have added {args} as your id.
+}}
+
+{setnick;{username} [{args}];{messagesender}}
+
+{void;{addrole;566723792446160926}}
+
+{void;{roleremove;{roleid;566724334282866700};{userid}}}
+
+{delete}
