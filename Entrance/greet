@@ -1,5 +1,3 @@
-..greet 
-
 {set;~firstMessage;
 {buildembed;
 color:light blue;
