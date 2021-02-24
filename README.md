@@ -8,13 +8,14 @@ greet,
 verify,
 setapikey
 
-API Api Needed 
+
+API Api Needed:
 profile
 
-Non Api Needed
+
+Non Api Needed:
 
 
 
 
-If the command starts with "..cc set", then it can be fire off in the server.
-If the command DOES NOT start with "..cc set" it needs to be added through Blargbot's IDE 
+If the command DOES NOT start with "..cc set" it needs to be added through Blargbot's IDE, otherwise it can be fire off in the server. 
