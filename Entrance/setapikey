@@ -1,9 +1,10 @@
-..cc set setapikey 
 {if;{argslength};==;0;
 {embed;{buildembed; 
 color:FF0000; 
 description:
-You need to add your API Key, for example:
+You need to add your API Key, 
+
+for example:
 {prefix}setapikey 123aBc345DeF
 {return}
 }}
