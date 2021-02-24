@@ -1,4 +1,3 @@
-..cc set setapikey 
 {if;{argslength};==;0;
 {embed;{buildembed; 
 color:FF0000; 
