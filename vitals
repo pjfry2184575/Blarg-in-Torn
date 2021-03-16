@@ -1,0 +1,15 @@
+..cc set vitals 
+{embed;
+{embedbuild;
+color:orange;
+title:__**Vitals Report**__ 
+for 
+**{usernick}**;
+description:
+__**Energy**__: {args;0}
+__**Refill**__: {args;1} 
+__**Xanax**__: {args;2} 
+& 
+{args;3} hours Medical cooldown; 
+}}
+{delete}
