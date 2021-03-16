@@ -1,0 +1,17 @@
+..cc set timezones 
+{username}, thank you for your time and consideration to personalize your your account here with us {newline} {newline}
+The server default prefix is ``/``.  {newline} {newline} 
+<----------------------------------------------> {newline} {newline}
+__***Setting your Time Zones***__
+Usage: 
+``!timezone [timezone]`` 
+Role Needed: None 
+Sets or retrieves your timezone. Timezones must use the timezone codes listed here:
+https://en.m.wikipedia.org/wiki/List_of_tz_database_time_zones {newline} {newline}
+<----------------------------------------------> {newline} {newline}
+Scroll down untill you see LISTS,
+USE the TZ* and then select what country you are from followed by the closest city. {newline} {newline}
+__***EXAMPLE***__ 
+``/timezone America/Los_Angeles`` {newline} {newline}
+
+{delete}
