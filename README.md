@@ -18,7 +18,7 @@ Non Api Needed:
 
 
 
-If the command DOES NOT start with "..cc set" it needs to be added through Blargbot's IDE, otherwise it can be fire off in the server. 
+If the command DOES NOT start with "..cc set" it needs to be added through Blargbot's IDE, otherwise it can be fired off in the server. 
 
 link to invite Blagbot
 http://invite.blargbot.xyz/
