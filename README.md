@@ -9,7 +9,7 @@ verify,
 setapikey
 
 
-API Api Needed:
+API Needed:
 profile
 
 
