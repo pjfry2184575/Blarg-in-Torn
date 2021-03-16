@@ -1,0 +1,10 @@
+..cc set request 
+<@&767329210901463062> 
+{embed;
+{embedbuild;
+color:orange;
+title:Item Request;
+description:{usernick} is requesting {args}
+
+}}
+{delete}
