@@ -1,5 +1,6 @@
 ..cc set tct 
-{embed;{buildembed;
+{embed;
+{buildembed;
   title:Current Date & Time in Torn City;
   color:orange;
   description:{time;dddd, MMMM Do YYYY @ h:mm:ss a;;;UTC}
