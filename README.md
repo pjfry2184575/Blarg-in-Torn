@@ -9,10 +9,12 @@ setapikey
 
 
 API:
-profile
+profile,
+stats
 
 
 Non Api:
+hits,
 vitals, 
 request,
 withdraw,
