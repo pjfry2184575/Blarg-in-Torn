@@ -1,0 +1,15 @@
+..cc set hits 
+
+{set;~tcinfo;{jget;{request;https://api.torn.com/user/{get;_{args}Account;1}?selections=bars&key={get;_{userid}ApiKey}  };body} }
+
+{void;{send;{channelid};
+{embedbuild;
+color:orange;
+title:Hit Counts with Given E;
+description:Information based on the entered Energy value.;
+fields.name: Current Available E;
+fields.value:{jget;{get;~tcinfo};energy.current};
+fields.name:Hits Available:;
+fields.value:{math;/;{jget;{get;~tcinfo};energy.current};25};
+fields.name:Leftover Energy:;
+fields.value:{math;%;{jget;{get;~tcinfo};energy.current};25}}}}
