@@ -1,0 +1,37 @@
+..cc set janitor 
+
+{if;{logic;!;{isarray;{get;_janitorkeys}}};
+  {set;_janitorkeys;[]}
+}
+
+{switch;{args;0};
+  ["program","program"];
+{if;{hasrole;{roleid;817983952374464522}}; :x: you already apart of the program.};{roleremove;767322477918421004};
+
+    {if;{hasrole;{roleid;767322477918421004}};
+      
+      {repeat;        
+        {set;~key;{randstr;1234567890ABCDEF;6}}          
+        {if;{indexof;{get;_janitorkeys};{get;~key}};==;-1;
+          {push;_janitorkeys;{get;~key}}
+        :key:   You have created a new Janitorial key: `{get;~key}`.{return}
+        };
+        100
+      }
+      ❌ Could not generate a valid key. Please try again.
+    }; 
+
+    {set;~index;{indexof;{get;_janitorkeys};{args;0}}}
+    {if;{get;~index};>=;0;
+      {void;
+        {splice;{get;_janitorkeys};{get;~index};1}
+        {addrole;{roleid;817983952374464522}}
+      }
+       Welcome to the Janitor program {usermention}!;
+      ❌ The key you tried is not valid.
+
+
+    }
+}
+
+{delete}
