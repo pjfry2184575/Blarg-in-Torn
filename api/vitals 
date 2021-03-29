@@ -1,0 +1,33 @@
+..cc set vitals 
+{set;~https;https:/}
+{set;~tcinfo;{jget;{request;{get;~https}/api.torn.com/user/{get;_{args}Account;1}?selections=bars,cooldowns&key={get;_{userid}ApiKey}};body} }
+
+{set;~time;{math;-;{math;+;{jget;{get;~tcinfo};cooldowns.medical};{jget;{get;~tcinfo};server_time}};{time;X}}}
+
+{set;~time1;{math;-;{math;+;{jget;{get;~tcinfo};cooldowns.drug};{jget;{get;~tcinfo};server_time}};{time;X}}}
+
+{embed;
+{embedbuild;
+color:orange;
+title:__**Vitals Report**__ 
+for 
+**{usernick}**;
+description:
+> • __**Energy**__: {numformat;{jget;{get;~tcinfo};energy.current};;;,}
+> • __**Refill**__: {args;0} 
+> • __**Xanax**__: {args;1} 
+& 
+> • Medical CD: {substring;{join;{map;~each;[
+    {math;/;{get;~time};3600},
+    {math;/;{math;%;{get;~time};3600};60},
+    {math;%;{get;~time};60}
+];{set;~out;{rounddown;{get;~each}}}:{for;~index;0;<;{math;-;2;{length;{get;~out}}};0}{get;~out}};};1}
+> • Drug CD: {substring;{join;{map;~each;[
+    {math;/;{get;~time1};3600},
+    {math;/;{math;%;{get;~time1};3600};60},
+    {math;%;{get;~time1};60}
+];{set;~out;{rounddown;{get;~each}}}:{for;~index;0;<;{math;-;2;{length;{get;~out}}};0}{get;~out}};};1}
+; 
+
+thumbnail.url:https://gyazo.com/113a950b17a2a12747bc27dee0f5c8f5.png
+}}
