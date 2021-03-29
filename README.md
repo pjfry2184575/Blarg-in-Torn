@@ -1,20 +1,22 @@
 # Blarg-in-Torn
-Blargbot code for various API & Non API ccmds for Torn City.
+An inexpensive alternative to buying an expensive Torn bot, using Blargbot code for various API & Non API custom commands for Torn City.
 
-# Current Commands
-Entrance:
+## Current Commands
+### Entrance:
 greet,
 verify,
 setapikey
 
 
-API:
-profile,
-stats,
+
+### API:
+profile, 
+stats, 
 vitals
 
 
-Non Api:
+
+### Non Api:
 hits,
 request,
 withdraw,
@@ -23,7 +25,8 @@ tct,
 janitor
 
 
-Lotto: 
+
+### Lotto: 
 Coming soon!!!!
 
 # Information
