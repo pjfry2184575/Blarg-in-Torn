@@ -6,27 +6,27 @@ An inexpensive alternative to buying an expensive Torn bot, using Blargbot code 
 
 ###### Entrance:
 ```
-• greet,
-• verify,
+• greet
+• verify
 • setapikey
 ```
 
 
 ###### API:
 ```
-• profile, 
-• stats, 
+• profile 
+• stats 
 • vitals
 ```
 
 
 ###### Non Api:
 ```
-• hits,
+• hits
 • withdraw
-• withdraw,
-• tctezones,
-• tct,
+• request
+• timezones
+• tct
 • janitor
 ```
 
