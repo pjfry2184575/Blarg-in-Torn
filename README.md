@@ -4,7 +4,7 @@ An inexpensive alternative to buying an expensive Torn bot, using Blargbot code 
 ## Current Commands
 
 
-#### Entrance:
+###### Entrance:
 ```
 • greet,
 • verify,
@@ -12,7 +12,7 @@ An inexpensive alternative to buying an expensive Torn bot, using Blargbot code 
 ```
 
 
-#### API:
+###### API:
 ```
 • profile, 
 • stats, 
@@ -20,7 +20,7 @@ An inexpensive alternative to buying an expensive Torn bot, using Blargbot code 
 ```
 
 
-#### Non Api:
+###### Non Api:
 ```
 • hits,
 • withdraw
@@ -31,7 +31,7 @@ An inexpensive alternative to buying an expensive Torn bot, using Blargbot code 
 ```
 
 
-#### Lotto: 
+###### Lotto: 
 ```
 Coming soon!!!!
 ```
