@@ -10,15 +10,17 @@ setapikey
 
 API:
 profile,
-stats
+stats,
+vitals
 
 
 Non Api:
 hits,
-vitals, 
 request,
 withdraw,
-timezones
+timezones,
+tct,
+janitor
 
 # Information
 If the command DOES NOT start with "..cc set" it needs to be added through Blargbot's IDE, otherwise it can be fired off in the server. 
