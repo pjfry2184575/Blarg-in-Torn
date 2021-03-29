@@ -1,3 +1,4 @@
+..cc set vitals 
 {if;{argslength};==;0;
 {embed;{buildembed; 
 color:FF0000; 
