@@ -1,10 +1,25 @@
 ..cc set request 
-<@&767329210901463062> 
-{embed;
-{embedbuild;
-color:orange;
-title:Item Request;
-description:{usernick} is requesting {args}
+{if;{channelid};==;819878308199268363;
+  
+{set;~xanaxRequest;<@&824886845174579211>} 
 
-}}
+{void;{send;{channelid};
+{embedbuild;
+color:white;
+title:Thank you, {usernick}!;
+description:Your {args} request will be sent to you as soon as possible!;
+thumbnail.url:https://gyazo.com/d39333caa9cd99e41670f1ed63be1702.png;
+footer.text:Date and Time of request:
+{time;YYYY/MM/DD HH:mm:ss;;;UTC}}}}
+
+{void;{send;824816033290256404;{get;~xanaxRequest}}}
+
+{void;{send;824816033290256404;
+{embedbuild;
+color:white;
+title:Xanax Request;
+description:{usernick} would like a {args} from the armory.;
+thumbnail.url:https://gyazo.com/d39333caa9cd99e41670f1ed63be1702.png;
+footer.text:Date and Time of request:
+{time;YYYY/MM/DD HH:mm:ss;;;UTC}}}}}
 {delete}

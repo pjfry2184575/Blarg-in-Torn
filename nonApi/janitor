@@ -8,8 +8,8 @@
   ["program","program"];
 {if;{hasrole;{roleid;817983952374464522}}; :x: you already apart of the program.};{roleremove;767322477918421004};
 
+     {if;{hasrole;{roleid;817983952374464522}}; :x: you already are apart of the program.};{roleremove;767322477918421004};
     {if;{hasrole;{roleid;767322477918421004}};
-      
       {repeat;        
         {set;~key;{randstr;1234567890ABCDEF;6}}          
         {if;{indexof;{get;_janitorkeys};{get;~key}};==;-1;
@@ -35,3 +35,8 @@
 }
 
 {delete}
+
+
+
+
+
