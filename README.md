@@ -36,7 +36,7 @@ An inexpensive alternative to buying an expensive Torn bot, using Blargbot code 
 Coming soon!!!!
 ```
 
-## Information
+# Information
 If the command DOES NOT start with "..cc set" it needs to be added through Blargbot's IDE, otherwise it can be fired off in the server. 
 
 link to invite Blagbot
