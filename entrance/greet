@@ -1,25 +1,16 @@
 {set;~firstMessage;
 {buildembed;
-color:light blue;
+color:orange;
 title:Welcome to {guildname},;
 description:
 {username}, 
 
-You are Islander #{guildsize}
+You are member #{guildsize}
 &
 Joined us here at : {userjoinedat;YYYY/MM/DD HH:mm:ss}
 ---------------------------------------------------------
 
-The Islanders have a few Service roles you can collect here on the island.
-
-If you provide a Service not list here, reach out to a Commander and have your role made and given to you
----------------------------------------------------------
-
-__**?Service <*role*>**__
-• *Reviver*
-• *Spy*
-• *Anon Message*
-• *Gamer*
+<your welcome message>
 
 ---------------------------------------------------------
 
