@@ -2,7 +2,7 @@
 An inexpensive alternative to buying an expensive Torn bot, using Blargbot code for various API & Non API custom commands for Torn City.
 
 ## Current Commands
-### Entrance:
+#### Entrance:
 ```
 greet,
 verify,
@@ -10,7 +10,7 @@ setapikey
 ```
 
 
-### API:
+#### API:
 ```
 profile, 
 stats, 
@@ -18,7 +18,7 @@ vitals
 ```
 
 
-### Non Api:
+#### Non Api:
 ```
 hits,
 request,
@@ -29,7 +29,7 @@ janitor
 ```
 
 
-### Lotto: 
+#### Lotto: 
 ```
 Coming soon!!!!
 ```
