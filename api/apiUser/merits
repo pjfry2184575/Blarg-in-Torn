@@ -1,0 +1,43 @@
+{set;~tcinfo;{jget;{request;https://api.torn.com/user/{get;_{args}Account;1}?selections=merits&key={get;_{userid}ApiKey}  };body} }
+
+{set;~secondMessage;
+
+{embedbuild;
+color:orange;
+title:Merits for {usernick};
+description:
+                
+> __**Nerve Bar**__: {jget;{get;~tcinfo};merits.Nerve Bar} 
+> __**Crime Experience**__: {jget;{get;~tcinfo};merits.Crime Experience}    
+> __**Education Length**__: {jget;{get;~tcinfo};merits.Education Length}
+> __**Awareness**__: {jget;{get;~tcinfo};merits.Awareness}
+> __**Bank Interest**__: {jget;{get;~tcinfo};merits.Bank Interest}
+> __**Masterful Looting**__: {jget;{get;~tcinfo};merits.Masterful Looting}    
+> __**Stealth**__: {jget;{get;~tcinfo};merits.Stealth}
+> __**Hospitalizing**__: {jget;{get;~tcinfo};merits.Hospitalizing}
+> __**Addiction Mitigation**__: {jget;{get;~tcinfo};merits.Addiction Mitigation}    
+> __**Employee Effectiveness**__: {jget;{get;~tcinfo};merits.Employee Effectiveness}
+
+> __**Brawn**__: {jget;{get;~tcinfo};merits.Brawn}    
+> __**Protection**__: {jget;{get;~tcinfo};merits.Protection}
+> __**Sharpness**__: {jget;{get;~tcinfo};merits.Sharpness}
+> __**Evasion**__: {jget;{get;~tcinfo};merits.Evasion}
+
+> __**Heavy Artillery Mastery**__: {jget;{get;~tcinfo};merits.Heavy Artillery Mastery}
+> __**Machine Gun Mastery**__: {jget;{get;~tcinfo};merits.Machine Gun Mastery}
+> __**Rifle Mastery**__: {jget;{get;~tcinfo};merits.Rifle Mastery}
+> __**SMG Mastery**__: {jget;{get;~tcinfo};merits.SMG Mastery}
+> __**Shotgun Mastery**__: {jget;{get;~tcinfo};merits.Shotgun Mastery}
+> __**Pistol Mastery**__: {jget;{get;~tcinfo};merits.Pistol Mastery}
+> __**Club Mastery**__: {jget;{get;~tcinfo};merits.Club Mastery}
+> __**Piercing Mastery**__: {jget;{get;~tcinfo};merits.Piercing Mastery}
+> __**Slashing Mastery**__: {jget;{get;~tcinfo};merits.Slashing Mastery}
+> __**Mechanical Mastery**__: {jget;{get;~tcinfo};merits.Mechanical Mastery}
+> __**Temporary Mastery**__: {jget;{get;~tcinfo};merits.Temporary Mastery}
+}
+  }
+
+{set;~secondMessageID;{send;{channelid};{get;~secondMessage}}}
+{timer;{delete;{channelid};{get;~secondMessageID}};10s}
+
+{delete}
