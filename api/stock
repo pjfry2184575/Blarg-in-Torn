@@ -1,0 +1,90 @@
+{if;{channelid};==;573991286609018902;
+  {set;~messageID;{send;{channelid}}
+    
+{if;{argslength};==;0;
+{embed;{buildembed;
+  color:FF0000;
+  description:
+You need to enter a stock's acronym.
+  
+__**Example**__
+  `!stock <acronym>`
+  
+{return}
+}}
+}
+    
+{if;{indexof;{get;~stockIndex};{args}};!=;-1;
+{embed;{buildembed;
+  color:FF0000;
+  description:
+That is not a stock.
+{return}
+}}
+}
+
+{void;
+    {set;~stockIndex;
+        {unindent;
+            {switch;{args;0};
+                tcse;0;
+                tsbc;1;
+                tcb;2;
+                sys;3;
+                slag;4;
+                iou;5;
+                grn;6;
+                tchs;7;
+                yaz;8;
+                tct;9;
+                cnc;10;
+                msg;11;
+                tmi;12;
+                tcp;13;
+                iil;14;
+                fhg;15;
+                sym;16;
+                lsc;17;
+                prn;18;
+                ewn;19;
+                tcm;20;
+                elbt;21;
+                hrg;22;
+                tgp;23;
+                wssb;25;
+                istc;26;
+                bag;27;
+                evl;28;
+                mcs;29;
+                wlt;30;
+                tcc;31
+            }
+        }
+    }
+    
+        {set;~tcstocks;
+        {jget;{request;https://api.torn.com/torn/?selections=stocks&key={randchoose;jIYWPl7FYjfWklft;TGZ2Er4TvCsyIFQo}};body}
+    }
+
+   {set;~hasBenefit;{jget;{get;~tcstocks};stocks.{get;~stockIndex}.benefit}}
+  }
+    
+
+      {embed;
+        {buildembed;
+            color:009900;
+            title:{jget;{get;~tcstocks};stocks.{get;~stockIndex}.acronym}  -  {jget;{get;~tcstocks};stocks.{get;~stockIndex}.name};
+            description:Director : {jget;{get;~tcstocks};stocks.{get;~stockIndex}.director}
+     Current Price : ${jget;{get;~tcstocks};stocks.{get;~stockIndex}.current_price}
+     Available Shares : {parsefloat;{jget;{get;~tcstocks};stocks.{get;~stockIndex}.available_shares}}
+Forecast : {jget;{get;~tcstocks};stocks.{get;~stockIndex}.forecast} | Demand : {jget;{get;~tcstocks};stocks.{get;~stockIndex}.demand};
+          
+          {if;{get;~hasBenefit};!=;;footer.text:{set;~currentPrice;{jget;{get;~tcstocks};stocks.{get;~stockIndex}.current_price}}
+{set;~benefitReq;{jget;{get;~tcstocks};stocks.{get;~stockIndex}.benefit.requirement}}
+{jget;{get;~tcstocks};stocks.{get;~stockIndex}.benefit.description}
+            
+Block Total : 
+${get;~currentPrice} x {get;~benefitReq} = ${math;*;{get;~currentPrice};{get;~benefitReq}}
+        }}
+    }}
+}

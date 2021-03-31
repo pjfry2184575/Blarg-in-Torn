@@ -18,6 +18,6 @@ description:
  
         
 {set;~secondMessageID;{send;{channelid};{get;~secondMessage}}}
-{timer;{delete;{channelid};{get;~secondMessageID}};10s}
+{timer;{delete;{channelid};{get;~secondMessageID}};15s}
 
 {delete}

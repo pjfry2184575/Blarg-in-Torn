@@ -25,6 +25,6 @@ __**Working Stats**__
  
         
 {set;~secondMessageID;{send;{channelid};{get;~secondMessage}}}
-{timer;{delete;{channelid};{get;~secondMessageID}};5s}
+{timer;{delete;{channelid};{get;~secondMessageID}};15s}
 
 {delete}
