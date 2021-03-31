@@ -1,4 +1,5 @@
 ..cc set request 
+
 {if;{channelid};==;819878308199268363;
   
 {set;~xanaxRequest;<@&824886845174579211>} 

@@ -6,7 +6,7 @@
   fields.value:`!tcid <Userid>`;
 }}
 }
-{set;~tcinfo;{jget;{request;https://api.torn.com/user/{get;_{args}Account;1}?selections=basic,profile,networth&key={get;_{userid}ApiKey}  };body}}
+{set;~tcinfo;{jget;{request;https://api.torn.com/user/{get;_{args}Account;1}?selections=ammo,attacks,attacksfull,bars,basic,battlestats,bazaar,cooldowns,crimes,discord,display,education,events,gym,hof,honors,icons,inventory,jobpoints,medals,merits,messages,money,networth,notifications,perks,personalstats,profile,properties,receivedevents,refills,reports,revives,revivesfull,skills,stocks,timestamp,travel,weaponexp,workstats&key={get;_{userid}ApiKey}  };body} }
 
  {embed;
 {buildembed;

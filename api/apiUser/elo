@@ -1,1 +1,24 @@
+..cc set elo 
+
 {set;~tcinfo;{jget;{request;https://api.torn.com/user/{get;_{args}Account;1}?selections=ammo,attacks,attacksfull,bars,basic,battlestats,bazaar,cooldowns,crimes,discord,display,education,events,gym,hof,honors,icons,inventory,jobpoints,medals,merits,messages,money,networth,notifications,perks,personalstats,profile,properties,receivedevents,refills,reports,revives,revivesfull,skills,stocks,timestamp,travel,weaponexp,workstats&key={get;_{userid}ApiKey}  };body} }
+
+
+  {set;~secondMessage;
+
+{embedbuild;
+color:orange;
+title:Elo Rating 
+for 
+{usernick};
+description:
+
+
+> **Rating**: {numformat;{jget;{get;~tcinfo};personalstats.elo};;;,}
+
+}}
+ 
+        
+{set;~secondMessageID;{send;{channelid};{get;~secondMessage}}}
+{timer;{delete;{channelid};{get;~secondMessageID}};10s}
+
+{delete}
