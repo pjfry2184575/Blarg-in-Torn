@@ -1,5 +1,21 @@
 ..cc set vitals 
 
+{if;{argslength};==;0;
+{embed;{buildembed;
+  color:FF0000;
+  description:
+You need to answer Yes or No for both Refill and Xanax.
+
+Think of the order in which you you do your Refill and Xanax during a chain when you answer.
+
+__**Example**__
+    `!vitals Refill = <yes/no> Xanax = <yes/no>`
+    
+    `!vitals yes yes`
+{return}
+}}
+}
+
 {set;~https;https:/}
 {set;~tcinfo;{jget;{request;https://api.torn.com/user/{get;_{args}Account;1}?selections=ammo,attacks,attacksfull,bars,basic,battlestats,bazaar,cooldowns,crimes,discord,display,education,events,gym,hof,honors,icons,inventory,jobpoints,medals,merits,messages,money,networth,notifications,perks,personalstats,profile,properties,receivedevents,refills,reports,revives,revivesfull,skills,stocks,timestamp,travel,weaponexp,workstats&key={get;_{userid}ApiKey}  };body} }
 
@@ -32,4 +48,5 @@ description:
 ; 
 
 thumbnail.url:https://gyazo.com/113a950b17a2a12747bc27dee0f5c8f5.png
+}}
 }}

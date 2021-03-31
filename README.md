@@ -4,34 +4,56 @@ An inexpensive alternative to buying an expensive Torn bot, using Blargbot code 
 ## Current Commands
 
 
-###### Entrance:
+### Server:
 ```
 • greet
 • verify
-• setapikey
+• timezones
+• tct 
 ```
 
 
-###### API:
+### API:
+###### _apiFaction_
 ```
-• profile 
 • stats 
 • vitals
 ```
 
-
-###### Non Api:
+###### _apiUser_
 ```
-• hits
+• elo
+• merits
+• profile
+• skills
+• setapikey
+```
+
+##### _apiGeneral_
+```
+• stock
+```
+
+
+### Non Api:
+###### _nonApiFaction_
+```
 • withdraw
 • request
-• timezones
-• tct
 • janitor
+```
+###### _nonApiUser_
+```
+
+```
+
+##### _apiGeneral_
+```
+
 ```
 
 
-###### Lotto: 
+### Lotto: 
 ```
 Coming soon!!!!
 ```
