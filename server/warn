@@ -1,0 +1,27 @@
+..cc set warn 
+{if;{logic;!;{ismod}};{return}}
+
+{if;{argslength};==;0;
+    You have to tell me who to warn!
+    {return}
+}
+
+{suppresslookup}
+{set;~user;{userid;{flag;_}}}
+{if;{get;~user};==;;{usermention}, please provide a valid user!{return}}
+
+{void;
+{warn;{get;~user};{flag;c};{flag;r}}}
+👌 **{username;{get;~user}}#{userdiscrim;{get;~user}}** has been given {if;0{flag;c};>;1;{flag;c} warnings.;a warning.} They now have {warnings;{get;~user}} warnings.
+
+{dm;{get;~user};
+{embedbuild;
+title:You have gotten a warning!;
+description:You have **{warnings;{get;~user}} warnings** now.{newline}Reason: **{if;{flagset;r};{flag;r};None.}**;footer.text:{username}#{userdiscrim} ({userid});footer.icon_url:{useravatar};timestamp:{time};color:peach}}
+
+{if;{flagset;t};
+    {timer;
+        {void;{pardon;{get;~user};{flag;c};Auto-pardon after set time.}};
+        {flag;t}
+    }
+}

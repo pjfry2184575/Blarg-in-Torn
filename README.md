@@ -10,12 +10,15 @@ An inexpensive alternative to buying an expensive Torn bot, using Blargbot code 
 • verify
 • timezones
 • tct 
+• checkwarn
+• warn
 ```
 
 
 ### API:
 ###### _apiFaction_
 ```
+• hits
 • stats 
 • vitals
 ```
@@ -47,7 +50,7 @@ An inexpensive alternative to buying an expensive Torn bot, using Blargbot code 
 
 ```
 
-##### _apiGeneral_
+##### _nonApiGeneral_
 ```
 
 ```

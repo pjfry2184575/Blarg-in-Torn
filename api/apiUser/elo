@@ -14,8 +14,9 @@ description:
 
 
 > **Rating**: {numformat;{jget;{get;~tcinfo};personalstats.elo};;;,}
+;
 
-}}
+thumbnail.url:https://gyazo.com/113a950b17a2a12747bc27dee0f5c8f5.png
  
         
 {set;~secondMessageID;{send;{channelid};{get;~secondMessage}}}

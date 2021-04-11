@@ -34,6 +34,9 @@ description:
 > __**Slashing Mastery**__: {jget;{get;~tcinfo};merits.Slashing Mastery}
 > __**Mechanical Mastery**__: {jget;{get;~tcinfo};merits.Mechanical Mastery}
 > __**Temporary Mastery**__: {jget;{get;~tcinfo};merits.Temporary Mastery}
+;
+
+thumbnail.url:https://gyazo.com/113a950b17a2a12747bc27dee0f5c8f5.png
 }
   }
 

@@ -1,0 +1,47 @@
+..cc set checkwarn 
+{if;{argslength};==;0;
+  Specify a role.
+  {return};
+  {set;~roles;{roles}}
+}
+{set;~index;-1}
+{void;
+  {repeat;
+  {increment;~index}
+    {if;{args;0};includes;@;
+      {if;{get;~roles;{get;~index}};includes;{parseint;{substring;{args;0};3}};
+        {set;~role;{get;~roles;{get;~index}}}
+      };
+      {if;{lower;{rolename;{get;~roles;{get;~index}}}};includes;{lower;{args}};
+        {set;~role;{get;~roles;{get;~index}}}
+      }
+    };
+    {length;{roles}}
+  }
+}
+{if;{get;~role};==;;
+  That role does not exist.
+  {return}
+}
+
+{set;~arrayOfMembers;{rolemembers;{get;~role};quiet}}
+{set;~index;-1}
+{set;~results;[]}
+
+__**Janitor Program**__
+{repeat;
+  {set;~user;{get;~arrayOfMembers;{increment;~index}}}
+  {set;~numberOfWarnings;{warnings;{get;~user}}}
+{if;{get;~numberOfWarnings};>;0;
+      {push;
+        {get;~results};
+          • {username;{get;~user}}: **{get;~numberOfWarnings}**
+      }
+    };
+  {length;{get;~arrayOfMembers}}
+}
+
+{if;{length;{get;~results}};==;0;
+  No users with warnings in that role.;
+  {join;{get;~results};{newline}}
+}
