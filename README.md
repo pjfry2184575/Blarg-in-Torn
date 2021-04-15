@@ -66,3 +66,4 @@ If the command DOES NOT start with "..cc set" it needs to be added through Blarg
 
 link to invite Blagbot
 http://invite.blargbot.xyz/
+

@@ -1,5 +1,6 @@
 ..cc set vitals 
 
+{//;This sets an error message if the user doesn't answer for args 0 & 1.}
 {if;{argslength};==;0;
 {embed;{buildembed;
   color:FF0000;
@@ -16,14 +17,17 @@ __**Example**__
 }}
 }
 
+{//;This makes the the API call for the required information.}
 {set;~https;https:/}
 {set;~tcinfo;{jget;{request;https://api.torn.com/user/{get;_{args}Account;1}?selections=ammo,attacks,attacksfull,bars,basic,battlestats,bazaar,cooldowns,crimes,discord,display,education,events,gym,hof,honors,icons,inventory,jobpoints,medals,merits,messages,money,networth,notifications,perks,personalstats,profile,properties,receivedevents,refills,reports,revives,revivesfull,skills,stocks,timestamp,travel,weaponexp,workstats&key={get;_{userid}ApiKey}  };body} }
 
+{//;This is the math for the Medical time countdown.}
+{set;~timeMed;{math;-;{math;+;{jget;{get;~tcinfo};cooldowns.medical};{jget;{get;~tcinfo};server_time}};{time;X}}}
 
-{set;~time;{math;-;{math;+;{jget;{get;~tcinfo};cooldowns.medical};{jget;{get;~tcinfo};server_time}};{time;X}}}
+{//;This is the math for the Drug time countdown.}
+{set;~timeDrug;{math;-;{math;+;{jget;{get;~tcinfo};cooldowns.drug};{jget;{get;~tcinfo};server_time}};{time;X}}}
 
-{set;~time1;{math;-;{math;+;{jget;{get;~tcinfo};cooldowns.drug};{jget;{get;~tcinfo};server_time}};{time;X}}}
-
+{//;This is setting the Embeded message.}
 {embed;
 {embedbuild;
 color:orange;
@@ -36,17 +40,18 @@ description:
 > • __**Xanax**__: {args;1} 
 & 
 > • Medical CD: {substring;{join;{map;~each;[
-    {math;/;{get;~time};3600},
-    {math;/;{math;%;{get;~time};3600};60},
-    {math;%;{get;~time};60}
+    {math;/;{get;~timeMed};3600},
+    {math;/;{math;%;{get;~timeMed};3600};60},
+    {math;%;{get;~timeMed};60}
 ];{set;~out;{rounddown;{get;~each}}}:{for;~index;0;<;{math;-;2;{length;{get;~out}}};0}{get;~out}};};1}
 > • Drug CD: {substring;{join;{map;~each;[
-    {math;/;{get;~time1};3600},
-    {math;/;{math;%;{get;~time1};3600};60},
-    {math;%;{get;~time1};60}
+    {math;/;{get;~timeDrug};3600},
+    {math;/;{math;%;{get;~timeDrug};3600};60},
+    {math;%;{get;~timeDrug};60}
 ];{set;~out;{rounddown;{get;~each}}}:{for;~index;0;<;{math;-;2;{length;{get;~out}}};0}{get;~out}};};1}
 ; 
 
+{//;This adds a small image to the top right of the Embeded message.}
 thumbnail.url:https://gyazo.com/113a950b17a2a12747bc27dee0f5c8f5.png
 }}
 }}
